@@ -1,0 +1,6 @@
+school_location: classroom
+common_packages:
+  - curl
+  - git
+  - vim
+  - htop

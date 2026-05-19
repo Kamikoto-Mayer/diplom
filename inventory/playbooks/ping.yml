@@ -1,0 +1,8 @@
+---
+- name: Check connectivity to classroom hosts
+  hosts: classroom
+  gather_facts: false
+
+  tasks:
+    - name: Ping hosts
+      ansible.builtin.ping:

@@ -1,0 +1,11 @@
+---
+- name: Configure school workstations
+  hosts: classroom
+  become: true
+
+  roles:
+    - common
+    - packages
+    - users
+    - services
+    - security

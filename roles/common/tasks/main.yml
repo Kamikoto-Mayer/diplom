@@ -6,7 +6,6 @@
 - name: Установка базовых утилит
   package:
     name:
-      - vim
       - htop
       - wget
       - curl

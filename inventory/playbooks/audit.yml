@@ -1,0 +1,26 @@
+---
+- name: Audit systems
+  hosts: techschool
+
+  tasks:
+
+    - name: Ping hosts
+      ping:
+
+    - name: Gather package info
+      package_facts:
+
+    - name: Gather service info
+      service_facts:
+
+    - name: Verify SSH service
+      debug:
+        msg: >
+          SSH status:
+          {{ services['ssh.service'].state }}
+
+    - name: Verify Git installation
+      debug:
+        msg: >
+          Git installed:
+          {{ 'git' in ansible_facts.packages }}

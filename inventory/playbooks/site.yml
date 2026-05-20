@@ -1,7 +1,7 @@
 ---
-- name: Configure school workstations
-  hosts: classroom
-  become: true
+- name: Управление рабочими станциями техникума
+  hosts: techschool
+  become: yes
 
   roles:
     - common
@@ -9,3 +9,4 @@
     - users
     - services
     - security
+    - monitoring

@@ -1,0 +1,13 @@
+---
+- name: Обновление кэша пакетов
+  package:
+    update_cache: yes
+
+- name: Установка программ для учебного класса
+  package:
+    name:
+      - firefox
+      - git
+      - neofetch
+      - tmux
+    state: present

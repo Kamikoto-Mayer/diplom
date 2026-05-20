@@ -1,0 +1,12 @@
+---
+- name: Запуск службы времени
+  service:
+    name: chronyd
+    state: started
+    enabled: true
+
+- name: Запуск системного журнала
+  service:
+    name: systemd-journald
+    state: started
+    enabled: true

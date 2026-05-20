@@ -1,0 +1,14 @@
+---
+- name: Создание группы students
+  group:
+    name: students
+    state: present
+
+- name: Создание учебного пользователя
+  user:
+    name: student
+    password: "{{ 'student123' | password_hash('sha512') }}"
+    shell: /bin/bash
+    groups: students
+    append: yes
+    state: present

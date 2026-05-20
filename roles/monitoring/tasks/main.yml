@@ -1,0 +1,13 @@
+---
+- name: Получение информации о системе
+  setup:
+
+- name: Сохранение отчёта
+  copy:
+    content: |
+      Hostname: {{ ansible_hostname }}
+      OS: {{ ansible_distribution }}
+      RAM: {{ ansible_memtotal_mb }} MB
+      CPU: {{ ansible_processor[1] }}
+      IP: {{ ansible_default_ipv4.address }}
+    dest: /tmp/system_info.txt

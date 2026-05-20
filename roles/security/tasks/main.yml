@@ -1,0 +1,10 @@
+---
+- name: Проверка статуса SSH
+  shell: systemctl is-active sshd
+  register: ssh_status
+  changed_when: false
+  ignore_errors: true
+
+- name: Показать состояние SSH
+  debug:
+    msg: "SSH status: {{ ssh_status.stdout }}"

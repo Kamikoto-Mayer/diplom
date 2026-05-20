@@ -1,0 +1,15 @@
+---
+- name: Bootstrap workstations
+  hosts: techschool
+  become: true
+
+  tasks:
+
+    - name: Update package cache
+      package:
+        update_cache: true
+
+    - name: Install python
+      package:
+        name: python3
+        state: present

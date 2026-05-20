@@ -1,0 +1,14 @@
+---
+- name: Настройка часового пояса
+  timezone:
+    name: Europe/Moscow
+
+- name: Установка базовых утилит
+  package:
+    name:
+      - vim
+      - htop
+      - wget
+      - curl
+      - net-tools
+    state: present
